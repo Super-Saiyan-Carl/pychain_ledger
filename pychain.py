@@ -176,7 +176,7 @@ sender = st.text_input("Sender")
 
 # @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
-amount = st.text_input("Receiver")
+receiver = st.text_input("Receiver")
 
 # @TODO:
 # Add an input area where you can get a value for `amount` from the user.
@@ -191,7 +191,7 @@ if st.button("Add Block"):
     # which is set equal to a `Record` that contains the `sender`, `receiver`,
     # and `amount` values
     new_block = Block(
-        data=input_data,
+        record=Record(sender=sender, receiver=receiver, amount=amount),
         creator_id=42,
         prev_hash=prev_block_hash
     )
